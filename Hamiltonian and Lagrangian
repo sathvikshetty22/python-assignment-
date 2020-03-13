@@ -1,0 +1,10 @@
+n = int(input())
+a = list(map(int, input().split(' ')))
+m = max(a)
+j = 0
+ 
+for i, elem in enumerate(a):
+    if elem < m:
+        continue
+    print(elem, end=' ')
+    m = max(a[i+1:], default=0)
