@@ -1,0 +1,15 @@
+n=int(input())
+l=list(map(int,input().split()))
+p=[]
+for i in range(0,n):
+    if l[i]==i+1:
+        continue
+    else:
+        if l[i]>i+1:
+            p.append(l[i])
+        if i+1 == p[-1]:
+            p.remove(i+1)
+if len(p)==0:        
+    print("Happy")  
+else:
+    print("Sad")
